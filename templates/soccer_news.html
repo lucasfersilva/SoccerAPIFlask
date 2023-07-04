@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} Noticias futebol {% endblock %}
+
+{% block content %}
+<h1 align="center">Noticias futebol </h1>
+<ul class="list-group list-group-flush" id="notes">
+        {% for news, links, descricao,img in data %}
+        <img src="{{ img }}", alt=" {{ descricao }}">
+         <li style="font-size:18px"><b> <a href ="{{ links }}"> {{ news }}</a> </b></li>
+
+
+        <p> {{ descricao}} </p>
+
+
+        {% endfor %}
+</ul>
+
+        {% endblock %}
